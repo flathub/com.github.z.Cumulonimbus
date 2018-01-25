@@ -40,8 +40,8 @@
         {
           "type": "file",
           "only-arches": ["x86_64"],
-          "url": "https://github.com/z-------------/cumulonimbus/releases/download/v1.8.0/cumulonimbus_1.8.0_amd64.deb",
-          "sha256": "15334369d664f8e70b2ed50d2aadda09a66508ba8db11e826f290454055e030d",
+          "url": "https://github.com/z-------------/cumulonimbus/releases/download/v1.9.6/cumulonimbus_1.9.6_amd64.deb",
+          "sha256": "5f58d9a493dcfb6354b9b857801f3e6fdce6f392e056bc7566b8c48d4ed74240",
           "dest-filename": "cumulonimbus.deb"
         },
         {
