@@ -27,7 +27,7 @@
         "ar x cumulonimbus.deb",
         "tar -xf data.tar.xz",
         "cp -r usr/* /app",
-        "cp -r opt/cumulonimbus/* /app/bin/",
+        "cp -r opt/Cumulonimbus/* /app/bin/",
         "desktop-file-edit --set-key=Exec --set-value='cumulonimbus %U' /app/share/applications/cumulonimbus.desktop",
         "desktop-file-edit --set-key=Icon --set-value='com.github.z.Cumulonimbus' /app/share/applications/cumulonimbus.desktop",
         "install -Dm644 com.github.z.Cumulonimbus.appdata.xml /app/share/appdata/com.github.z.Cumulonimbus.appdata.xml",
