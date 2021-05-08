@@ -1,4 +1,6 @@
 {
-    "only-arches": ["x86_64"]
+    "only-arches": ["x86_64"],
+    "end-of-life": "The application has been renamed to CPod",
+    "end-of-life-rebase": "com.github.z.Cpod"
 }
 
