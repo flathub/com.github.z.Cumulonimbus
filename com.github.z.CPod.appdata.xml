@@ -1,12 +1,12 @@
 <!-- Copyright 2017 Zackary Guard-->
 <?xml version='1.0' encoding='UTF-8'?>
 <component>
-  <id type="desktop">com.github.z.Cumulonimbus.desktop</id>
+  <id type="desktop">com.github.z.CPod.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <name>Cumulonimbus</name>
+  <name>CPod</name>
   <project_license>Apache License 2.0</project_license>
   <summary>A simple, beautiful podcast app</summary>
-  <url type="homepage">https://github.com/z-------------/cumulonimbus</url>
+  <url type="homepage">https://github.com/z-------------/CPod</url>
   <description>
     Simple podcast app built with Electron. Play your favorite podcasts, and discover new ones with an easy to use interface.
     <ul>
@@ -19,15 +19,16 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image>https://camo.githubusercontent.com/01c31373e6f7a97e83f3ecaa3dd6c9d1ff46082f/687474703a2f2f692e696d6775722e636f6d2f655a35513235672e706e67</image>
+      <image>https://camo.githubusercontent.com/29f3468ffd92b5a853eea94fe19e6686714f2caefc564963c165981351284045/68747470733a2f2f692e696d6775722e636f6d2f53374b397772722e706e67</image>
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2019-04-06" version="1.27.1"/>
     <release date="2018-01-25" version="1.9.6"/>
     <release date="2018-01-03" version="1.8.0"/>
   </releases>
   <update_contact>zacharyguard@gmail.com</update_contact>
-  <translation type="gettext">cumulonimbus</translation>
+  <translation type="gettext">CPod</translation>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
     <content_attribute id="violence-fantasy">none</content_attribute>
