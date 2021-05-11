@@ -1,6 +1,5 @@
 {
-  "app-id": "com.github.z.CPod",
-  "branch": "stable",
+  "app-id": "com.github.z.Cumulonimbus",
   "base": "org.electronjs.Electron2.BaseApp",
   "base-version": "20.08",
   "runtime": "org.freedesktop.Platform",
@@ -17,7 +16,7 @@
     "--socket=pulseaudio",
     "--share=network",
     "--device=dri",
-    "--filesystem=home",
+    "--filesystem=xdg-download",
     "--talk-name=org.freedesktop.Notifications"
   ],
   "modules": [
@@ -30,8 +29,8 @@
         "cp -r usr/* /app",
         "cp -r opt/CPod/* /app/bin/",
         "desktop-file-edit --set-key=Exec --set-value='cpod %U' /app/share/applications/cpod.desktop",
-        "desktop-file-edit --set-key=Icon --set-value='com.github.z.CPod' /app/share/applications/cpod.desktop",
-        "install -Dm644 com.github.z.CPod.appdata.xml /app/share/appdata/com.github.z.CPod.appdata.xml",
+        "desktop-file-edit --set-key=Icon --set-value='com.github.z.Cumulonimbus' /app/share/applications/cpod.desktop",
+        "install -Dm644 com.github.z.Cumulonimbus.appdata.xml /app/share/appdata/com.github.z.CPod.appdata.xml",
         "chmod +x /app/bin/cpod"
       ],
       "cleanup": [
@@ -47,7 +46,7 @@
         },
         {
           "type": "file",
-          "path": "com.github.z.CPod.appdata.xml"
+          "path": "com.github.z.Cumulonimbus.appdata.xml"
         }
       ]
     }
