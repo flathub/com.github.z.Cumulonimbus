@@ -30,7 +30,7 @@
         "cp -r opt/CPod/* /app/bin/",
         "desktop-file-edit --set-key=Exec --set-value='cpod %U' /app/share/applications/cpod.desktop",
         "desktop-file-edit --set-key=Icon --set-value='com.github.z.Cumulonimbus' /app/share/applications/cpod.desktop",
-        "install -Dm644 com.github.z.Cumulonimbus.appdata.xml /app/share/appdata/com.github.z.CPod.appdata.xml",
+        "install -Dm644 com.github.z.Cumulonimbus.appdata.xml /app/share/appdata/com.github.z.Cumulonimbus.appdata.xml",
         "chmod +x /app/bin/cpod"
       ],
       "cleanup": [
