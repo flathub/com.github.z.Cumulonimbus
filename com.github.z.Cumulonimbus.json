@@ -1,9 +1,9 @@
 {
   "app-id": "com.github.z.Cumulonimbus",
   "base": "org.electronjs.Electron2.BaseApp",
-  "base-version": "21.08",
+  "base-version": "25.08",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "21.08",
+  "runtime-version": "25.08",
   "sdk": "org.freedesktop.Sdk",
   "command": "cpod",
   "rename-icon": "cpod",
@@ -40,8 +40,8 @@
         {
           "type": "file",
           "only-arches": ["x86_64"],
-          "url": "https://github.com/z-------------/CPod/releases/download/v1.28.0/CPod_1.28.0_amd64.deb",
-          "sha256": "5123ba29f3930447ad06f4cd7bc6a7d49fb467ca32294ac74e9e5f711530b1b0",
+          "url": "https://github.com/z-------------/CPod/releases/download/v1.28.2/CPod_1.28.2_amd64.deb",
+          "sha256": "d2711df577801d425f70d5358388b7b40987f03695ddfa85698ec206a6e1b21a",
           "dest-filename": "CPod.deb"
         },
         {
