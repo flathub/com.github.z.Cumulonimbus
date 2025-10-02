@@ -26,7 +26,7 @@
       "build-commands": [
         "mkdir -p /app/bin",
         "chmod +x CPod.AppImage",
-        "./MusicBlocks.AppImage --appimage-extract",
+        "./CPod.AppImage --appimage-extract",
         "mv squashfs-root/app/* /app/bin/",
         "mv squashfs-root/usr/* /app/",
         "mkdir -p /app/share/applications",
