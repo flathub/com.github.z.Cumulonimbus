@@ -28,7 +28,7 @@
         "chmod +x CPod.AppImage",
         "./CPod.AppImage --appimage-extract",
         "mv squashfs-root/app/* /app/bin/",
-        "mv squashfs-root/usr/* /app/",
+        "cp -u -r squashfs-root/usr/* /app/",
         "mkdir -p /app/share/applications",
         "mv squashfs-root/cpod.desktop /app/share/applications/",
         "install -Dm644 com.github.z.Cumulonimbus.appdata.xml /app/share/appdata/com.github.z.Cumulonimbus.appdata.xml"
