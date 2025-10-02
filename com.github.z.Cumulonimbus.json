@@ -21,80 +21,17 @@
   ],
   "modules": [
     {
-  "name": "intltool",
-  "cleanup": [ "*" ],
-  "sources": [
-    {
-      "type": "archive",
-      "url": "https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz",
-      "sha256": "67c74d94196b153b774ab9f89b2fa6c6ba79352407037c8c14d5aeb334e959cd"
-    },
-    {
-      "type": "patch",
-      "path": "intltool-perl5.26-regex-fixes.patch"
-    }
-  ]
-},
-    {
-    "name": "dbus-glib",
-    "cleanup": [
-        "*.la",
-        "/bin",
-        "/etc",
-        "/include",
-        "/libexec",
-        "/share/gtk-doc",
-        "/share/man"
-    ],
-    "config-opts": [
-        "--disable-static",
-        "--disable-gtk-doc"
-    ],
-    "sources": [
-        {
-            "type": "archive",
-            "url": "https://dbus.freedesktop.org/releases/dbus-glib/dbus-glib-0.114.tar.gz",
-            "sha256": "c09c5c085b2a0e391b8ee7d783a1d63fe444e96717cc1814d61b5e8fc2827a7c",
-            "x-checker-data": {
-                "type": "anitya",
-                "project-id": 1979,
-                "url-template": "https://dbus.freedesktop.org/releases/dbus-glib/dbus-glib-$version.tar.gz"
-            }
-        }
-    ]
-},
-    {
-      "name": "gconf",
-      "cleanup": ["/bin", "/share/aclocal"],
-      "config-opts": [
-        "--disable-static",
-        "--disable-gtk-doc",
-        "--disable-orbit",
-        "--disable-introspection" 
-      ],
-      "build-options":{
-        "cflags": "-Wno-error=incompatible-pointer-types"
-      },
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://download.gnome.org/sources/GConf/3.2/GConf-3.2.6.tar.xz",
-          "sha256": "1912b91803ab09a5eed34d364bf09fe3a2a9c96751fde03a4e0cfa51a04d784c"
-        }
-      ]
-    },
-    {
       "name": "CPod",
       "buildsystem": "simple",
       "build-commands": [
-        "ar x CPod.deb",
-        "tar -xf data.tar.xz",
-        "cp -r usr/* /app",
-        "cp -r opt/CPod/* /app/bin/",
-        "desktop-file-edit --set-key=Exec --set-value='cpod %U' /app/share/applications/cpod.desktop",
-        "desktop-file-edit --set-key=Icon --set-value='com.github.z.Cumulonimbus' /app/share/applications/cpod.desktop",
-        "install -Dm644 com.github.z.Cumulonimbus.appdata.xml /app/share/appdata/com.github.z.Cumulonimbus.appdata.xml",
-        "chmod +x /app/bin/cpod"
+        "mkdir -p /app/bin",
+        "chmod +x CPod.AppImage",
+        "./MusicBlocks.AppImage --appimage-extract",
+        "mv squashfs-root/app/* /app/bin/",
+        "mv squashfs-root/usr/* /app/",
+        "mkdir -p /app/share/applications",
+        "mv squashfs-root/cpod.desktop /app/share/applications/",
+        "install -Dm644 com.github.z.Cumulonimbus.appdata.xml /app/share/appdata/com.github.z.Cumulonimbus.appdata.xml"
       ],
       "cleanup": [
         "/share/doc"
@@ -103,9 +40,9 @@
         {
           "type": "file",
           "only-arches": ["x86_64"],
-          "url": "https://github.com/z-------------/CPod/releases/download/v1.28.2/CPod_1.28.2_amd64.deb",
-          "sha256": "d2711df577801d425f70d5358388b7b40987f03695ddfa85698ec206a6e1b21a",
-          "dest-filename": "CPod.deb"
+          "url": "https://github.com/z-------------/CPod/releases/download/v1.28.2/CPod-1.28.2-x86_64.AppImage",
+          "sha256": "bef193eb34bcceaa455b29931349eef65e11821bb90930afc6a26e679b141358",
+          "dest-filename": "CPod.AppImage"
         },
         {
           "type": "file",
