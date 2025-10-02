@@ -72,6 +72,9 @@
         "--disable-orbit",
         "--disable-introspection" 
       ],
+      "build-options":{
+        "cflags": "-Wno-error=incompatible-pointer-types"
+      },
       "sources": [
         {
           "type": "archive",
