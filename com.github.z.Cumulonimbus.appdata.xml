@@ -6,6 +6,10 @@
   <project_license>Apache-2.0</project_license>
   <summary>A simple, beautiful podcast app</summary>
   <url type="homepage">https://github.com/z-------------/CPod</url>
+  <launchable type="desktop-id">cpod.desktop</launchable>
+  <developer id="com.github.z">
+   	<name>Cumulonimbus</name>
+  </developer>
   <description>
     <p>Simple podcast app built with Electron. Play your favorite podcasts, and discover new ones with an easy to use interface.</p>
     <ul>
@@ -19,10 +23,11 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image>https://camo.githubusercontent.com/29f3468ffd92b5a853eea94fe19e6686714f2caefc564963c165981351284045/68747470733a2f2f692e696d6775722e636f6d2f53374b397772722e706e67</image>
+      <image>https://i.imgur.com/S7K9wrr.png</image>
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2024-01-13" version="1.28.2"/>
     <release date="2021-07-28" version="1.28.0"/>
     <release date="2019-04-06" version="1.27.1"/>
     <release date="2018-01-25" version="1.9.6"/>
