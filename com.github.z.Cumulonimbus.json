@@ -1,9 +1,9 @@
 {
   "app-id": "com.github.z.Cumulonimbus",
-  "base": "org.electronjs.Electron2.BaseApp",
-  "base-version": "21.08",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "21.08",
+  "runtime-version": "25.08",
+  "base": "org.electronjs.Electron2.BaseApp",
+  "base-version": "25.08",
   "sdk": "org.freedesktop.Sdk",
   "command": "cpod",
   "rename-icon": "cpod",
@@ -24,14 +24,14 @@
       "name": "CPod",
       "buildsystem": "simple",
       "build-commands": [
-        "ar x CPod.deb",
-        "tar -xf data.tar.xz",
-        "cp -r usr/* /app",
-        "cp -r opt/CPod/* /app/bin/",
-        "desktop-file-edit --set-key=Exec --set-value='cpod %U' /app/share/applications/cpod.desktop",
-        "desktop-file-edit --set-key=Icon --set-value='com.github.z.Cumulonimbus' /app/share/applications/cpod.desktop",
-        "install -Dm644 com.github.z.Cumulonimbus.appdata.xml /app/share/appdata/com.github.z.Cumulonimbus.appdata.xml",
-        "chmod +x /app/bin/cpod"
+        "mkdir -p /app/bin",
+        "chmod +x CPod.AppImage",
+        "./CPod.AppImage --appimage-extract",
+        "mv squashfs-root/app/* /app/bin/",
+        "cp -u -r squashfs-root/usr/* /app/",
+        "mkdir -p /app/share/applications",
+        "mv squashfs-root/cpod.desktop /app/share/applications/",
+        "install -Dm644 com.github.z.Cumulonimbus.appdata.xml /app/share/appdata/com.github.z.Cumulonimbus.appdata.xml"
       ],
       "cleanup": [
         "/share/doc"
@@ -40,9 +40,9 @@
         {
           "type": "file",
           "only-arches": ["x86_64"],
-          "url": "https://github.com/z-------------/CPod/releases/download/v1.28.0/CPod_1.28.0_amd64.deb",
-          "sha256": "5123ba29f3930447ad06f4cd7bc6a7d49fb467ca32294ac74e9e5f711530b1b0",
-          "dest-filename": "CPod.deb"
+          "url": "https://github.com/z-------------/CPod/releases/download/v1.28.2/CPod-1.28.2-x86_64.AppImage",
+          "sha256": "bef193eb34bcceaa455b29931349eef65e11821bb90930afc6a26e679b141358",
+          "dest-filename": "CPod.AppImage"
         },
         {
           "type": "file",
