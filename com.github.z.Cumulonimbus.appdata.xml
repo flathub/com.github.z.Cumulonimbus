@@ -36,4 +36,10 @@
   <update_contact>flathub@thelion.website</update_contact>
   <translation type="gettext">CPod</translation>
   <content_rating type="oars-1.1" />
+  <keywords>
+    <keyword>podcast app</keyword>
+    <keyword>listen to podcasts</keyword>
+    <keyword>discover new shows</keyword>
+    <keyword>audiobook player</keyword>
+  </keywords>
 </component>
